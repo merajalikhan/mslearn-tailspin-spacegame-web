@@ -15,6 +15,11 @@ steps:
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
-      $vmrequest = az vm list | ConvertFrom-Json | Where-Object {$_.Name -Match "${{parameters.vmname}}"}  
-      az vm start --resource-group $vmrequest.resourcegroup --name $vmrequest.name
+      az vm create \
+         --name MyLinuxAgent12 \
+         --resource-group mk-space-game-rg \
+         --image canonical:0001-com-ubuntu-server-focal:20_04-lts:latest \
+         --size Standard_DS2_v2 \
+         --admin-username azureuser \
+    
       
