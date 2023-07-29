@@ -23,5 +23,7 @@ steps:
          --admin-username azureuser \
          --generate-ssh-keys
       sudo apt-get update   
+      curl https://raw.githubusercontent.com/MicrosoftDocs/mslearn-tailspin-spacegame-web/main/.agent-tools/build-tools.sh > build-tools.sh
+      cat build-tools.sh
     
       
