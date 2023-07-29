@@ -16,7 +16,7 @@ steps:
     scriptLocation: 'inlineScript'
     inlineScript: |
       az vm create \
-         --name $vmname \
+         --name ${{parameters.vmname}} \
          --resource-group mk-space-game-rg \
          --image canonical:0001-com-ubuntu-server-focal:20_04-lts:latest \
          --size Standard_DS2_v2 \
