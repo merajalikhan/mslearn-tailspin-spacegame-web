@@ -16,11 +16,12 @@ steps:
     scriptLocation: 'inlineScript'
     inlineScript: |
       az vm create \
-         --name MyLinuxAgent12 \
+         --name $vmname \
          --resource-group mk-space-game-rg \
          --image canonical:0001-com-ubuntu-server-focal:20_04-lts:latest \
          --size Standard_DS2_v2 \
          --admin-username azureuser \
          --generate-ssh-keys
+      sudo apt-get update   
     
       
