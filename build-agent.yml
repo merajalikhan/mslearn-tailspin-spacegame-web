@@ -9,7 +9,7 @@ parameters:
 steps:
 - checkout: self
 - task: AzureCLI@2
-  displayName: Close VM using az cli
+  displayName: Create VM using az cli
   inputs:
     azureSubscription: 'GERALEXGR'
     scriptType: 'bash'
